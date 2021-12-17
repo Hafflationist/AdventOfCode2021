@@ -1,5 +1,3 @@
-{-# LANGUAGE TupleSections #-}
-
 module Aoc12
     ( solve12
     ) where

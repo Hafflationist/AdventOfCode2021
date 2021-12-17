@@ -1,0 +1,77 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 57310ed5e0fadf04088d8285dac79fd58dd18428005bb5be6497de1b8f555269
+
+name:           HaskellAoC
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Github username here/HaskellAoC#readme>
+homepage:       https://github.com/Github username here/HaskellAoC#readme
+bug-reports:    https://github.com/Github username here/HaskellAoC/issues
+author:         Author name here
+maintainer:     Author email here
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Github username here/HaskellAoC
+
+library
+  exposed-modules:
+      Aoc01
+      Aoc02
+      Aoc03
+      Lib
+  other-modules:
+      Paths_HaskellAoC
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , text
+    , containers
+    , split
+    , bifunctors
+  default-language: Haskell2010
+
+executable HaskellAoC-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_HaskellAoC
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellAoC
+    , base >=4.7 && <5
+    , text
+    , containers
+    , split
+    , bifunctors
+  default-language: Haskell2010
+
+test-suite HaskellAoC-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HaskellAoC
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellAoC
+    , base >=4.7 && <5
+    , text
+    , containers
+    , split
+    , bifunctors
+  default-language: Haskell2010
